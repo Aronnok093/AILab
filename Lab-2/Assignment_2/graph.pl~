@@ -1,0 +1,11 @@
+edge('A','B',2).
+edge('A','C',1).
+edge('B','C',3).
+
+
+pathLength(X,Y,L):- edge(X,Y,L),!.
+pathLength(X,Y,L):- edge(X,Z,L1), pathLength(Z,Y,L2), L is L1+L2.
+
+findG:- write('Src '),read(Src),write('Des '),read(Des),
+	pathLength(Src,Des,L),write(L),nl.
+findG.
