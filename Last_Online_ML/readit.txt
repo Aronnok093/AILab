@@ -1,1 +1,49 @@
+from google.colab import drive
+drive.mount('/content/drive')
 
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+
+df = pd.read_excel("path", index_col = 0)
+df
+
+indexer
+       #row         #col
+df.loc[[1,2,6,7], ['Age', 'Income']] --row-col specific
+	#row  #col
+df.iloc[0:5, 0:3]  row-col specific
+
+df.loc[(df.Age < 30) & (df.Student == 'yes')] ---condition df.loc[]
+
+
+import pandas as pd
+
+data = [[10, 18, 11], [13, 15, 8], [9, 20, 3]]
+
+df = pd.DataFrame(data)
+
+print(df.describe())
+
+
+df.col.argmax()-- In Python's pandas library, the argmax() function is used to find the index position of the maximum value in a Series or DataFrame. 
+
+df.col.unique() ----print uniq value
+
+df.col.value_counts() ----- function is used to compute a frequency count of unique values in a Series or a DataFrame column
+
+df.iloc[:, [1, 2, 4]]-- ":," all row
+
+type(df["Age"]) ---for type
+
+df.shape ---to determine the dimensions (number of rows and columns) of the array
+
+df.Age.values.reshape(len(df),1) ---is reshaping the values 
+
+df.sample(2)----used to randomly select a specified number of rows from a DataFrame.
+
+np.random.randint(0, 100, 6)-- min, max , number of random values
+
+print(df.head(3)) --- Display the first 3 rows
+
+df.groupby('Income').Class.value_counts() ---- is used to perform a grouped value count operation on a pandas DataFrame df
